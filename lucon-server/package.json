@@ -1,0 +1,17 @@
+{
+  "name": "lucon-server",
+  "version": "1.0.0",
+  "description": "NASA Spaceapps 2021 hackathon project LuCon server.",
+  "main": "index.js",
+  "author": "Abir Ganguly, Rupak Biswas, Saptarshi Dey",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "http": "^0.0.1-security",
+    "sequelize": "^6.6.5",
+    "sqlite3": "^5.0.2",
+    "ws": "^8.2.2"
+  }
+}
