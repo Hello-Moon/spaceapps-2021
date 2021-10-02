@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>LuCon server test</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <script src='script.js'></script>
+</head>
+
+<body>
+    <h1>Choose an action.</h1>
+
+    <input type="text" id="uname" placeholder="uname">
+    <input type="password" id="pass" placeholder="passowrd">
+    <input type="password" id="confPass" placeholder="confirm password">
+    <button id="register" type="button" title="Simulate register">
+        Simulate register
+    </button>
+
+    <button id="login" type="button" title="Simulate login">
+        Simulate login
+    </button>
+    <button id="logout" type="button" title="Simulate logout">
+        Simulate logout
+    </button>
+    <button id="wsButton" type="button" title="Open WebSocket connection">
+        Open WebSocket connection
+    </button>
+    <button id="wsSendButton" type="button" title="Send WebSocket message">
+        Send WebSocket message
+    </button>
+    <pre id="messages" style="height: 400px; overflow: scroll"></pre>
+    <script src="script.js"></script>
+</body>
+
+</html>

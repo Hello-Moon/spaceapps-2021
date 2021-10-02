@@ -36,6 +36,10 @@ Log.init({
     //     allowNull: false
     // },
 
+    // fromUser: {
+    //     type: DataTypes.INTEGER,
+    //     allowNull: false
+    // },
     // fromUser is defined later, as a foreign key
     dataType: {
         type: DataTypes.INTEGER(1),

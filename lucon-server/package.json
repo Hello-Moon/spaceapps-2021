@@ -6,10 +6,13 @@
   "author": "Abir Ganguly, Rupak Biswas, Saptarshi Dey",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-session": "^1.17.2",
     "http": "^0.0.1-security",
+    "mongodb": "^4.1.2",
     "sequelize": "^6.6.5",
     "sqlite3": "^5.0.2",
     "ws": "^8.2.2"
