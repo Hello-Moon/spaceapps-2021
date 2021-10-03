@@ -23,7 +23,7 @@ Then comes the Back-end,
                         2. Simultaneous creation of logs between drop down list of users ( custom logs ) 
                         3. Implementation of instrumentation data using API into the console ( eg. live lander location/ suit telemetry/ hud.)
 
-   Authors of this proejct 
+ ##  Authors of this project 
    
 <b>Anargha Bose</b> :   Project HR, Project Presentation/Documentation, Team Management and Content Design<br>
 <b>Manish Das</b> :      Project Presentation/Documentation, Team Coordination, Code Tester<br>
