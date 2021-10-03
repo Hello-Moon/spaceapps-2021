@@ -1,10 +1,13 @@
 import "../css/login.css";
 import React from "react";
+import Logo from './LOGO.png';
+
 const LoginForm = (props) => {
 
     return (
         <div>
             <div className="userinput">
+                <img src={Logo} alt="Logo" />
                 <h1>Log into your account</h1>
                 <div>
                     <input id="username" placeholder="Username" type="text" onKeyDown={
@@ -17,9 +20,11 @@ const LoginForm = (props) => {
                     } />
                     <select id="select_desg">
                         <option value="" disabled hidden selected> Select your designation</option>
-                        <option value="astro">Astronaut</option>
-                        <option value="gcrew">Ground Crew</option>
-                        <option value="viewer">Viewer</option>
+                        <option value="CAPCOM">Capsule Communicator</option>
+                        <option value="PAO">Public Affairs Office</option>
+                        <option value="FOD">Flight Operations Directorate</option>
+                        <option value="EVA">Extravehicular Activity</option>
+                        <option value = "VW">Viewer</option>
                     </select>
                     <input id="authcode" placeholder="Authcode" type="password" onKeyDown={
                         // handleEnterPress

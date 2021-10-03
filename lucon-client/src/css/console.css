@@ -178,6 +178,7 @@ body {
     width: 100%;
 }
 
+
 @media screen and (max-width:1336px) {
     #inputbar>input {
         width: 92%;
@@ -204,6 +205,10 @@ body {
 
     .message-container .message {
         width: 20%;
+    }
+
+    #searchbox {
+        margin: 66px 43%;
     }
 }
 
@@ -233,6 +238,46 @@ body {
     font-style: monospace;
     color:black;
     font-size: large;
+}
+
+.imageAct{
+    height: 640px;
+    width:600px;
+}
+
+
+#searchbar{
+    height: 30px;
+    width: 350px;
+    margin-right: 300px;
+    color: #e3e3e3;
+    padding: 0px 20px;
+}
+
+#searchbox{
+    display:none;
+    flex-direction: column;
+    justify-content: flex-start;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    height:400px;
+    width: 350px;
+    /* margin-left: 43%; */
+    margin: 66px 43%;
+    background-color: #127986;
+    border: 2px solid #e3e3e3;
+}
+
+#searchbox p {
+    color: #e3e3e3;
+}
+
+.searchResult {
+    width: 90%;
+    background-color: rgb(19, 65, 92);
+    font-size: 20px;
+    padding: 5px;
 }
 
 @media screen and (max-width:1140px) {
@@ -276,11 +321,17 @@ body {
     .message-container .message {
         width: 50%;
     }
+
+    #searchbox {
+        margin: 66px 29%;
+        margin-top: 100px !important;
+    }
 }
 
 .message-container {
     display: flex;
     margin: 20px 0;
+    margin-bottom: 50px;
     width: 100%;
     font-size: 17px;
     text-align: left;
