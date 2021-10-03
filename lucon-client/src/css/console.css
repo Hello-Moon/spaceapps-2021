@@ -1,0 +1,308 @@
+a {
+    cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: monospace;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #AAA;
+    border-radius: 10px;
+    background-image: -webkit-linear-gradient(90deg, rgba(0, 0, 0, .2) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, .2) 50%, rgba(0, 0, 0, .2) 75%, transparent 75%, transparent)
+}
+
+#menus {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: larger;
+    font-weight: 700;
+}
+
+.c_panel_buts {
+    text-align: center;
+    height: 50px;
+    width: 40%;
+    background-color: white;
+    font-size: 15px;
+    color: black;
+    margin: 5px 10px;
+    padding: 10px 26px;
+    display: inline-block;
+}
+
+.c_panel_submit_but {
+    height: 50px;
+    width: 88%;
+    background-color: white;
+    font-size: 20px;
+    color: black;
+    margin: 5px 10px;
+    margin-bottom: 10px;
+    padding: 10px 26px;
+    display: inline-block;
+}
+
+.svg-style {
+    margin: 3px 25%;
+}
+
+.svg-style-submit {
+    margin: 3px 40%;
+}
+
+.c_panel__submit_but:hover, .c_panel_buts:hover {
+    background-color: rgb(187, 182, 182);
+    color: black;
+}
+
+.indivdocx {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#nagv {
+    padding: 20px;
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    width: 300px;
+    overflow: hidden;
+    padding-bottom: 70px;
+    border-right: 2.5px white solid;
+}
+
+#content {
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 82vw;
+    scroll-behavior: smooth;
+    color: white;
+}
+
+.contents {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: larger;
+}
+
+#content_title {
+    font-size: xx-large;
+    color: white;
+    text-decoration: underline;
+}
+
+#msgstore {
+    width: 100%;
+    height: 86%;
+    background-color: rgb(29, 36, 36);
+    overflow-y: auto;
+}
+
+#msgstore img {
+    border: 5px solid #e3e3e3;
+    max-width: 100%;
+    height: auto;
+}
+
+#inputbar {
+    display: initial;
+    width: 100%;
+    height: 50px;
+}
+
+#inputbar>input {
+    color: #e3e3e3;
+    background-color: #1d2424;
+    font-size: large;
+    font-weight: 600;
+    width: 95%;
+    height: 50px;
+    border: none !important;
+}
+
+#inputbar>input:focus {
+    border: 1px solid #e3e3e3 !important;
+}
+
+#inputbar>button {
+    background-color: rgb(45, 45, 66);
+    width: 5%;
+    height: 50px;
+    font-size: large;
+}
+
+#inputbar>button:focus {
+    outline: none;
+}
+
+#inputbar>button:hover {
+    background-color: rgb(31, 31, 32);
+    text-decoration: underline;
+}
+
+#header_box {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+}
+
+@media screen and (max-width:1336px) {
+    #inputbar>input {
+        width: 92%;
+    }
+    
+    #inputbar>button {
+        width: 8%;
+    }
+}
+
+@media screen and (max-width:1280px) {
+    #msgstore{
+        height: 84%;
+    }
+    #inputbar>input {
+        width:90%;
+    }
+    #inputbar>button {
+        width: 10%;
+    }
+    .message-container .timestamp, .message-container .username {
+        width: 10%;
+    }
+
+    .message-container .message {
+        width: 20%;
+    }
+}
+
+.statsDisplay{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:260px;
+    height: 700px;
+    background-color: rgb(23, 9, 37);
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+#instatsDisplay{
+    display: flex;
+    flex-direction: column;
+    width: 245px;
+    height: 300px;
+    margin-top:7px;
+    background-color: rgb(230, 228, 228);
+    overflow-y: auto;
+}
+
+#instatsDisplay >*{
+    font-style: monospace;
+    color:black;
+    font-size: large;
+}
+
+@media screen and (max-width:1140px) {
+    #msgstore{
+        height: 82%;
+    }
+    .message-container .timestamp, .message-container .username {
+        width: 15%;
+    }
+
+    .message-container .message {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:1140px) {
+    #msgstore{
+        height: 82%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    #nagv {
+        display: none;
+    }
+    #content {
+        padding-top: 0%;
+        width: 100vw;
+    }
+    #header_box {
+        position: unset;
+        width: 100%;
+    }
+    #msgstore{
+        height: 95%;
+    }
+    .message-container .timestamp, .message-container .username {
+        width: 25%;
+    }
+
+    .message-container .message {
+        width: 50%;
+    }
+}
+
+.message-container {
+    display: flex;
+    margin: 20px 0;
+    width: 100%;
+    font-size: 17px;
+    text-align: left;
+    line-height: 20px;
+}
+
+.message-container .timestamp, .message-container .username {
+    width: 15%;
+}
+
+.message-container .message {
+    width: 70%;
+}
+
+/*.user-red {
+    color: rgb(245, 94, 68);
+}
+
+.user-blue {
+    color: rgb(3, 250, 250);
+}
+
+.user-grey {
+    color: #d3d3d3;
+}*/

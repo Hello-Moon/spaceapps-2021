@@ -1,0 +1,44 @@
+#errpgdiv_outer{
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+#errpgdiv_inner{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#errpgdiv_inner_p1{
+    font-size: x-large;
+    font-weight: 800;
+    text-transform: capitalize;
+    animation: an1 4s ease-in-out  infinite alternate;
+}
+#errpgdiv_inner_p2{
+    font-size: large;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+#refresh_but_login{
+    border-radius: 10% 10% 10% 10%;
+    color:white;
+    background-color: blue;
+}
+
+
+@keyframes an1 {
+    0%{
+        transform: scale(50%);
+    }
+    100%{
+        transform: scale(100%);
+    }
+}

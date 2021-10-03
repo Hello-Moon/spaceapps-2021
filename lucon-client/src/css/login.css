@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+body {
+  background-color: #081221;
+}
+
+.App {
+  text-align: center;
+}
+
+#login-submit {
+  font-size: 25px;
+  padding: 5px 15px;
+  margin: 10px 0;
+  color: #e3e3e3;
+  background-color: #081221;
+  border: 1px solid #e3e3e3;
+}
+
+.App .userinput {
+  padding: 20px 10px;
+  background-color: #1a202c;
+  border: 2px solid #e3e3e3;
+  width: 700px;
+  margin: 20vh auto;
+}
+
+.userinput {
+  box-shadow: rgba(90, 90, 90, 0.25) 0px 50px 100px -20px, rgba(120, 120, 120, 0.3) 0px 30px 60px -30px;
+}
+
+.App h1 {
+  color: #e3e3e3;
+}
+
+.App input {
+  background-color: #f3f3f3;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 0px solid #555;
+  font-size: 20px;
+  border: 1px solid #e3e3e3;
+}
+
+.App select {
+  color: #e3e3e3;
+  background-color: #081221;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #e3e3e3;
+  font-size: 20px;
+}
+
+input[type=text], input[type=password] {
+  background-color: #081221;
+  color: #e3e3e3;
+}
+
+.App input:focus {
+  border: 1px solid #eee;
+}
+
+.App h1 {
+  font-size: 35px;
+}
