@@ -40,15 +40,16 @@ const server = http.createServer(app);
 const wss = new WebSocket.Server({ noServer: true });
 
 server.on('upgrade', function (request, socket, head) {
-    console.log('Parsing session from request...');
-    sessionParser(request, {}, () => {
-        if (!request.session.userInfo) {
-            console.log("sending Unauthorized");
-            socket.write('HTTP/1.1 401 Unauthorized\r\n\r\n');
-            socket.destroy();
-            return;
-        }
-    console.log('Session is parsed!');
+    // TODO: session cookies in react doesn't work properly
+    // console.log('Parsing session from request...');
+    // sessionParser(request, {}, () => {
+    //     if (!request.session.userInfo) {
+    //         console.log("sending Unauthorized");
+    //         socket.write('HTTP/1.1 401 Unauthorized\r\n\r\n');
+    //         socket.destroy();
+    //         return;
+    //     }
+    // console.log('Session is parsed!');
 
     wss.handleUpgrade(request, socket, head, function (ws) {
         wss.emit('connection', ws, request);
