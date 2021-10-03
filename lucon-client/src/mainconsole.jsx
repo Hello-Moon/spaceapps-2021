@@ -2,6 +2,28 @@ import React from "react";
 import "./css/console.css"
 import "./css/tailwind.css"
 
+// //Time display event
+// const Clock = ()=>{
+//     let currentTime = new Date()
+//     let currentHrs = currentTime.getHours()
+//     let currentMins = currentTime.getMinutes()
+//     let currentSecs = currentTime.getSeconds()
+
+
+//     let currentTimeDisplay = `Time : ${currentHrs}:${currentMins}:${currentSecs}`
+
+//     if ((currentHrs === 00 )  & (currentMins === 59 ) & (currentSecs === 59 )) {
+//         console.log("New Date")
+//         // clearInterval(time)
+//     }
+//     else {
+//         console.log(currentTimeDisplay)
+//     }
+// }
+
+
+// let time  = setInterval(Clock,1000)
+
     return (
         <div
             className="docpagediv"
