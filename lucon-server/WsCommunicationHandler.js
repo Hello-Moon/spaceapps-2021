@@ -1,19 +1,20 @@
 const { Log } = require("./DB");
 
 function handleWS(ws, request, map) {
-    if ((!request.session) || (!request.session.userInfo)) {
-        console.log("user is not authenticated.");
-        ws.send(JSON.stringify({
-            type: "error",
-            data: {
-                errmsg: "user is not authenticated."
-            }
-        }));
-        return;
-    }
-    const userInfo = request.session.userInfo;
+    // TODO: session cookies in react doesn't work properly
+    // if ((!request.session) || (!request.session.userInfo)) {
+    //     console.log("user is not authenticated.");
+    //     ws.send(JSON.stringify({
+    //         type: "error",
+    //         data: {
+    //             errmsg: "user is not authenticated."
+    //         }
+    //     }));
+    //     return;
+    // }
+    // const userInfo = request.session.userInfo;
 
-    map.set(userInfo, ws);
+    // map.set(userInfo, ws);
 
     ws.on('message', function (message) {
         console.log(`Received message ${message}`);
