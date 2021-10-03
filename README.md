@@ -25,10 +25,10 @@ Then comes the Back-end,
 
    Authors of this proejct 
    
-Anargha Bose :   Project HR, Project Presentation/Documentation, Team Management and Content Design
-Manish Das :      Project Presentation/Documentation, Team Coordination, Code Tester
-Rupak Biswas :  Frontend, UI/UX Design, Client Connection
-Adarsh Pandey : Frontend, UI/UX Design
-Saptarshi Dey :  Initial Authentication, Database, Media Storage & Stream
-Abir Ganguly :    Backend, Queries, Web Socket & HTTP Connection
+<b>Anargha Bose</b> :   Project HR, Project Presentation/Documentation, Team Management and Content Design<br>
+<b>Manish Das</b> :      Project Presentation/Documentation, Team Coordination, Code Tester<br>
+<b>Rupak Biswas</b> :  Frontend, UI/UX Design, Client Connection<br>
+<b>Adarsh Pandey</b> : Frontend, UI/UX Design<br>
+<b>Saptarshi Dey</b> :  Initial Authentication, Database, Media Storage & Stream<br>
+<b>Abir Ganguly</b> :    Backend, Queries, Web Socket & HTTP Connection
 
