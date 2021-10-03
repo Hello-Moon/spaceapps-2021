@@ -1,4 +1,6 @@
+const { logger } = require("./Logging");
 const { Log } = require("./DB");
+const { User } = require('./DB');
 
 function handleWS(ws, request, map) {
     // TODO: session cookies in react doesn't work properly
@@ -17,16 +19,20 @@ function handleWS(ws, request, map) {
     // map.set(userInfo, ws);
 
     ws.on('message', function (message) {
-        console.log(`Received message ${message}`);
+        logger.write(`[INFO] received message from client ${message}\n`);
         message = JSON.parse(message);
 
         // TODO: sanitize input, or try catch?
         if (message.type === "userInfo") {
             map.set(ws, message.data);
         } else if (message.type === "newLogEvent") {
-            Log.create(message.data).then((result) => {
-                broadcastNewLog(ws, result, map)
-            });
+            Log.create(message.data)
+                .then(() => {
+                    Log.findOne({ where: message.data, include: User })
+                        .then((log) => {
+                            broadcastNewLog(log, map);
+                        });
+                })
         }
     });
 
@@ -36,16 +42,15 @@ function handleWS(ws, request, map) {
     });
 }
 
-function broadcastNewLog(excludeWS, log, map) {
+function broadcastNewLog(log, map) {
+    const payload = JSON.stringify({
+        type: "newLogEvent",
+        data: log
+    });
+    logger.write(`[INFO] log created and broadcasting ${payload}\n`);
     for (let ws of map.keys()) {
-        if (ws !== excludeWS) {
-            ws.send(JSON.stringify({
-                type: "newLogEvent",
-                data: log
-            }));
-        }
+        ws.send(payload);
     }
 }
-
 
 module.exports.handleWS = handleWS;

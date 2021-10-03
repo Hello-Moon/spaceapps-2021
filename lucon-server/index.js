@@ -1,6 +1,8 @@
-const { AuthenticationServer } = require('./AuthenticationServer');
+const { HTTPCommunicationManager } = require('./HTTPCommunicationManager');
 const { WsCommunicationHandler, handleWS } = require('./WsCommunicationHandler');
 const { DB } = require('./DB');
+
+const upload = require("express-fileupload");
 
 const http = require('http');
 const WebSocket = require('ws').WebSocket;
@@ -9,6 +11,7 @@ const express = require('express');
 const app = express();
 
 app.use(express.static('test-client'));
+app.use(upload());
 
 const cors = require('cors');
 app.use(cors());
@@ -33,7 +36,7 @@ const map = new Map();
 new DB();
 
 // handle only authentication, via http
-new AuthenticationServer(app, map).initServer();
+new HTTPCommunicationManager(app, map).initServer();
 
 const server = http.createServer(app);
 
