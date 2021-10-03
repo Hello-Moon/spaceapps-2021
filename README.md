@@ -4,7 +4,7 @@ Code repository for the NASA Space Apps challenge 2021
 Code repository for the NASA Space Apps challenge 2021
 
 
-  PASSCODE FOR AUTHENTICATION CODE IN LOGIN; beeb33p
+  PASSCODE FOR AUTHENTICATION CODE IN LOGIN: beepb33p
 
                   PROJECT  ＬｕＣｏｎ
                   A solution for the challenge “ Lunar Surface Operation : Real- time collaboration by team “Hello, Moon!”
