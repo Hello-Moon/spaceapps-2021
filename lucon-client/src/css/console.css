@@ -207,9 +207,9 @@ body {
         width: 20%;
     }
 
-    #searchbox {
+    /* #searchbox {
         margin: 66px 43%;
-    }
+    } */
 }
 
 .statsDisplay{
@@ -249,9 +249,7 @@ body {
 #searchbar{
     height: 30px;
     width: 350px;
-    margin-right: 300px;
     color: #e3e3e3;
-    padding: 0px 20px;
 }
 
 #searchbox{
@@ -263,8 +261,8 @@ body {
     position: absolute;
     height:400px;
     width: 350px;
-    /* margin-left: 43%; */
-    margin: 66px 43%;
+    margin-left: 14.5vw;
+    /* margin: 66px 43%; */
     background-color: #127986;
     border: 2px solid #e3e3e3;
 }
@@ -293,12 +291,35 @@ body {
     }
 }
 
+@media screen and (max-width:1340px) {
+    #searchbox{
+        margin-left: 10.5vw;
+    }
+}
+
 @media screen and (max-width:1140px) {
     #msgstore{
         height: 82%;
     }
 }
 
+@media screen and (max-width:1080px) {
+    #searchbox{
+        margin-left: 8.5vw;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    #searchbox{
+        margin-left: 7.5vw;
+    }
+}
+
+@media screen and (max-width:950px) {
+    #searchbox{
+        margin-left: 6vw;
+    }
+}
 @media screen and (max-width:768px) {
     #nagv {
         display: none;

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./css/console.css"
-import "./css/tailwind.css"
 import axios from 'axios'
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
@@ -15,7 +14,7 @@ var Console = (props) => {
         listening,
         resetTranscript,
         browserSupportsSpeechRecognition
-      } = useSpeechRecognition();
+    } = useSpeechRecognition();
     let wsClient;
     var userData = JSON.parse(props.userData)
 
@@ -44,23 +43,23 @@ var Console = (props) => {
     var time = setInterval(Clock, 1000)
 
 
-    function SpeechToText(){
+    function SpeechToText() {
         if (browserSupportsSpeechRecognition) {
             mini_msg_pusher("Mic is on");
             SpeechRecognition.startListening({
-                language:"en-US",
-                continuous:true,
-            }).then(()=>{
+                language: "en-US",
+                continuous: true,
+            }).then(() => {
                 console.log(transcript);
-            }).catch(err=>console.error("ERROR : ",err.message));
+            }).catch(err => console.error("ERROR : ", err.message));
         }
         else console.log("This Browser doesn't support Speech Synthesis");
     }
 
-    function StopListening(){
+    function StopListening() {
         SpeechRecognition.stopListening();
         mini_msg_pusher("Mic is off");
-        document.getElementById('inpbox').value=transcript;
+        document.getElementById('inpbox').value = transcript;
         resetTranscript();
     }
 
@@ -221,7 +220,7 @@ var Console = (props) => {
                 var messageP = document.createElement('img')
                 messageP.setAttribute('src', data.data.log)
                 messageP.setAttribute('class', "imageAct")
-                
+
 
 
                 msgDiv.append(timestampP);
@@ -524,15 +523,13 @@ var Console = (props) => {
         >
             <header
                 id="header_box"
-                className="bg-gray-600 text-black body-font"
-                style={{ height: "7%" }}
+                className="font-mono bg-gray-600 text-black body-font flex flex-wrap items-center"
             >
-                <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-
-                    <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center align-center">
-                        <input id="searchbar" onChange={filterLog} type="text" placeholder="search by name" />
-                        <h1>LuCon</h1>
-                    </nav>
+                <div className="w-1/2 flex flex-wrap items-center justify-around font-mono">
+                    <input id="searchbar" onChange={filterLog} type="text" placeholder="search by name" />
+                </div>
+                <div className="w-1/2 flex flex-wrap justify-around items-center">
+                 <h1>LuCon</h1>
                 </div>
             </header>
             <div id="searchbox">
@@ -615,7 +612,7 @@ var Console = (props) => {
                                     </svg>
                                 </div>
                             </button>
-                            
+
                             <button className="c_panel_buts" onClick={() => { logout() }}>LOGOUT</button>
                             <button className="c_panel_buts"><a href="http://localhost:8080/logs" target="blank">SAVELOG</a></button>
                             <button className="c_panel_buts" onClick={() => { clearSearch() }}>SRCH_CLR</button>
